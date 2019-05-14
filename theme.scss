@@ -3781,9 +3781,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
-h1 a, h1 a:link, h1 a:visited, h1 a:hover, h2 a, h2 a:link, h2 a:visited, h2 a:hover, h3 a, h3 a:link, h3 a:visited, h3 a:hover, h4 a, h4 a:link, h4 a:visited, h4 a:hover, h5 a, h5 a:link, h5 a:visited, h5 a:hover, h6 a, h6 a:link, h6 a:visited, h6 a:hover {
-  color: {{ settings.color-text }};
-}
+// h1 a, h1 a:link, h1 a:visited, h1 a:hover, h2 a, h2 a:link, h2 a:visited, h2 a:hover, h3 a, h3 a:link, h3 a:visited, h3 a:hover, h4 a, h4 a:link, h4 a:visited, h4 a:hover, h5 a, h5 a:link, h5 a:visited, h5 a:hover, h6 a, h6 a:link, h6 a:visited, h6 a:hover {
+//   color: {{ settings.color-text }};
+// }
 
 p, ul, li, a {
   margin-top: 0;
@@ -3801,19 +3801,19 @@ a, a:link, a:visited, a:hover {
   color: {{ settings.color-text }};
   text-decoration: none;
 }
-
-a:hover {
-  color: {{ settings.color-text }};
-}
-
-.colored-links a, .colored-links a:link, .colored-links a:visited, .colored-links a:hover {
-  color: {{ settings.color-text }};
-  text-decoration: underline;
-}
-
-.colored-links a:hover {
-  color: {{ settings.color-text | color_lighten: 30 }};
-}
+//
+// a:hover {
+//   color: {{ settings.color-text }};
+// }
+//
+// .colored-links a, .colored-links a:link, .colored-links a:visited, .colored-links a:hover {
+//   color: {{ settings.color-text }};
+//   text-decoration: underline;
+// }
+//
+// .colored-links a:hover {
+//   color: {{ settings.color-text | color_lighten: 30 }};
+// }
 
 .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading h5, .wf-loading h6, .wf-loading p, .wf-loading ul, .wf-loading li, .wf-loading a, .wf-loading blockquote {
   visibility: hidden;
@@ -6438,14 +6438,14 @@ body {
   margin-top: 10px;
 }
 
-.rte-content a, .rte-content a:link, .rte-content a:visited, .rte-content a:hover {
-  color: {{ settings.color-text }};
-  text-decoration: underline;
-}
-
-.rte-content a:hover {
-  color: {{ settings.color-text | color_lighten: 30 }};
-}
+// .rte-content a, .rte-content a:link, .rte-content a:visited, .rte-content a:hover {
+//   color: {{ settings.color-text }};
+//   text-decoration: underline;
+// }
+//
+// .rte-content a:hover {
+//   color: {{ settings.color-text | color_lighten: 30 }};
+// }
 
 /*  3.5 - Modal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -7825,7 +7825,7 @@ a.featured-grid--call-to-action:hover {
 }
 
 .product-slider {
-  background: {{ settings.color-product-slider-bg }};
+  background: #FCFBF5;
   position: relative;
   padding-top: 100px;
   padding-bottom: 50px;
@@ -7970,7 +7970,8 @@ h2.map--heading {
 
 @media only screen and (min-width: 768px) {
   .featured-content--root[data-full-width="true"] {
-    padding: 50px 0;
+    margin: 50px 0;
+    padding: 0;
   }
 }
 
@@ -9734,7 +9735,7 @@ html.no-cssgrid .product-page--thumbs[data-position="image-column"] {
 /*  4.5 - Page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .template-page .main-content .row {
-  max-width: 1000px;
+  // max-width: 1000px;
   margin: 0;
 }
 
@@ -10379,4 +10380,325 @@ html.no-cssgrid .product-page--thumbs[data-position="image-column"] {
 
 .template-password a, .template-password label {
   color: #fafafa !important;
+}
+
+/*  4.11 - Menu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.page-content--menu {
+  max-width: 1070px;
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.page-content--menu h1 {
+  font-family: plantin, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.page-content--menu h2 {
+  font-family: RomanaBTWXX-Bold;
+  font-size: 20px;
+  line-height: 2.65;
+  margin-bottom: 0;
+}
+
+.page-content--menu h2:not(:first-child) {
+  border-top: 1px solid #707070;
+  margin-top: 50px;
+  padding-top: 35px;
+}
+
+.page-content--menu p {
+  font-family: plantin, sans-serif;
+	font-weight: 400;
+  font-size: 14px;
+	font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.3px;
+  margin-bottom: 0;
+}
+
+.page-content--menu a.button {
+  margin: 100px 0 50px;
+  text-decoration: none;
+}
+
+/*  4.12 - Generic Template
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.page-content--generic {
+  max-width: 1070px;
+  margin: 0 auto;
+  padding: 20px 0 50px;
+}
+
+.page-content--generic h1 {
+  font-family: plantin, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.2;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.page-content--generic h2 {
+  font-family: RomanaBTWXX-Bold;
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.page-content--generic p {
+  font-family: plantin, sans-serif;
+	font-weight: 400;
+  font-size: 14px;
+	font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.3px;
+  margin-bottom: 0;
+}
+
+/*  4.13 - Our Story
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.page-our-story .row.full-width {
+  padding: 0;
+}
+
+.page-content--about {
+  margin: 0 auto;
+  padding: 20px 0 50px;
+}
+
+.page-content--about h1.page-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-content--about h1 {
+  font-family: plantin, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.page-content--about h2 {
+  font-family: RomanaBTWXX-Bold;
+  font-size: 26px;
+  line-height: 1.38;
+  margin-bottom: 0;
+}
+
+.page-content--about h2.featured-content--title {
+  font-family: plantin, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.2;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+.page-content--about p {
+  font-family: plantin, sans-serif;
+	font-weight: 400;
+  font-size: 14px;
+	font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.3px;
+  margin-bottom: 0;
+}
+
+.page-content--about p.featured-content--subtitle {
+  font-family: RomanaBTWXX-Bold;
+  font-size: 26px;
+  line-height: 1.38;
+  padding-bottom: 30px;
+  letter-spacing: 0;
+}
+
+.page-content--about img {
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-content--about .featured-content--root[data-full-width="true"] {
+    margin: 0 0 100px;
+  }
+}
+
+/*  4.14 - Map
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.page-content--map {
+  margin: 0 auto;
+  padding: 70px 0 0;
+}
+
+.page-content--map h1 {
+  font-family: RomanaBTWXX-Bold;
+  font-size: 26px;
+  line-height: 1.38;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.page-content--map p {
+  font-family: plantin, sans-serif;
+	font-weight: 400;
+  font-size: 14px;
+	font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.3px;
+  margin-bottom: 0;
+}
+
+.page-content--map .rte-content {
+  padding-bottom: 50px;
+}
+
+
+/*  4.14 - Catering
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.page-catering .row.full-width {
+  padding: 0;
+}
+
+.page-content--catering {
+  margin: 0 auto;
+  padding: 20px 0 50px;
+}
+
+.page-content--catering h1.page-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.page-content--catering h1 {
+  font-family: plantin, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.page-content--catering .featured-text--body p {
+  font-family: RomanaBTWXX-Bold;
+  font-size: 26px;
+  line-height: 1.15;
+  margin-bottom: 0;
+}
+
+.page-content--catering h2.featured-content--title {
+  font-family: plantin, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.2;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+.page-content--catering p {
+  font-family: plantin, sans-serif;
+	font-weight: 400;
+  font-size: 14px;
+	font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.3px;
+  margin-bottom: 0;
+}
+
+.page-content--catering p.featured-content--subtitle {
+  font-family: RomanaBTWXX-Bold;
+  font-size: 26px;
+  line-height: 1.38;
+  padding-bottom: 30px;
+  letter-spacing: 0;
+}
+
+.page-content--catering img {
+  margin: 0;
+}
+
+.page-content--catering .featured-grid--root {
+  padding: 0 0 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-content--catering .featured-content--root[data-full-width="true"] {
+    margin: 50px 0;
+  }
+}
+
+.page-content--catering .catering--menu-block {
+  max-width: 1070px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.page-content--catering .catering--menu-block h1 {
+  font-family: RomanaBTWXX-Bold;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+.page-content--catering .catering--menu-block h2 {
+  font-family: RomanaBTWXX-Bold;
+  font-size: 26px;
+  line-height: 2.65;
+  margin-bottom: 0;
+  border-top: 1px solid #707070;
+  margin-top: 50px;
+  padding-top: 35px;
+}
+
+.page-content--catering .catering--menu-block h3 {
+  font-family: RomanaBTWXX-Bold;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.page-content--catering .catering--menu-block p {
+  font-family: plantin, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.3px;
+  margin-bottom: 0;
+}
+
+.page-content--catering .contactform--block .contactform--header {
+  font-family: RomanaBTWXX-Bold;
+  font-size: 26px;
+  line-height: 1.15;
+}
+
+.page-content--catering .contactform--block h3 {
+  font-family: RomanaBTWXX-Bold;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.page-content--catering .contactform--block h4 {
+  font-family: RomanaBTWXX-Bold;
+  font-size: 17px;
+  line-height: 2;
+  margin-bottom: 0;
+}
+
+.page-content--catering .contactform--block p {
+  font-family: plantin, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
 }
