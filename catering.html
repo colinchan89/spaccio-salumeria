@@ -1,0 +1,196 @@
+<div class="page-content--catering">
+  <div class="row full-width">
+    <div class="page-content">
+      <h1 class="page-title">{{ page.title }}</h1>
+			<div class="shopify-section">
+				<div class="featured-grid--root" data-js-class="FrameworkFeaturedGrid" data-dark-background="false" data-full-width="false" data-mobile-width="2" data-alternative-color="false" data-header-text-exists="true" data-footer-text-exists="false" data-text-position="center" data-spacing="true" style="" data-js-loaded="true">
+				  <div class="featured-grid--body">
+				    <div class="featured-grid--item" data-width="50" style="width: 50.0%;">
+				      <div class="featured-grid--item--container">
+				        <img src="https://satyr.io/555x555">
+				      </div>
+				    </div>
+				    <div class="featured-grid--item" data-width="50" style="width: 50.0%;">
+				      <div class="featured-grid--item--container">
+				        <img src="https://satyr.io/555x555">
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+			<div class="shopify-section">
+			  <div class="featured-text--root">
+			    <div class="featured-text--container">
+			      <div class="featured-text--header">
+			        <h2 class="featured-text--heading">Talk about your brand</h2>
+			      </div>
+			      <div class="featured-text--body rte-content">
+			        <p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<div class="shopify-section">
+        <div class="featured-content--root" data-full-width="true" data-dark-background="false" data-overlap="false" data-transparent-overlap="false" data-text-exists="true" data-text-position="right" data-alternative-color="false" data-text-width="small" style="background-color: #efe9df;">
+          <div class="featured-content--container">
+            <div class="featured-content--image">
+              <div class="image--root" style="width: 100%;">
+                <div class="image--container" style="padding-top: 66.68%;"><img src="https://cdn.shopify.com/s/files/1/0054/4630/3837/files/2-2_2x_1c8565ae-ae53-43a9-b643-085ae185d2f9.jpg?1405" alt="Spaccio Salumeria" /></div>
+              </div>
+            </div>
+            <div class="featured-content--text">
+              <div class="featured-content--text-container">
+                <h2 class="featured-content--title">Purveyors of Culinary Pleasures</h2>
+                <div class="featured-content--description rte-content">
+                  <p class="featured-content--subtitle">We’re on a unique mission to provide a true gastronomic Italian heaven without having to trot to Italy.</p>
+                  <p>We make high-quality Italian food —Meals that inspire gathering around a table any time of the year. From rare Italian cheeses to pastas and olive oils, we want you to experience the beauty of connection, great conversation and spontaneous laughter through our food.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="rte-content">
+      {{ page.content }}
+    </div>
+  </div>
+	<div class="row full-width">
+		<div class="shopify-section">
+			<div class="featured-content--root"  data-full-width="true" data-dark-background="false" data-overlap="false" data-transparent-overlap="false" data-text-exists="true" data-text-position="center" data-alternative-color="false" data-text-width="large" style="">
+				<div class="featured-content--container">
+					<div class="featured-content--image">
+					<div class="image--root" style="width: 100%;">
+						<div class="image--container" data-aspectratio="1.4997000599880024" style="padding-top:66.68%;">
+							<img src="https://satyr.io/1440x900">
+						</div>
+					</div>
+					</div>
+						<div class="featured-content--text">
+							<div class="featured-content--text-container">
+									<h2 class="featured-content--title">
+										Fresh Italian cravings every day
+									</h2>
+									<div class="featured-content--description rte-content">
+										<p>From the smallest batch to the biggest, we give every item in our menu, the time and attention it needs to make sure every detail is just right.&nbsp;</p>
+									</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div class="row contactform--block">
+		<div class="large-4 columns">
+		<h2 class="contactform--header">Ordering Details</h2>
+		<h3>Condizione</h3>
+		<h4>Ordering & Deadlines</h4>
+		<p>• Catering orders require a minimum notice of 72 business hours prior to the event date. </p>
+		<p>• Please advise us about any allergies when you place your order</p>
+		<p>• All catering orders must be submitted via email at catering@trufflebrothers.com or personally at our spaccio salumeria location</p>
+		<br />
+		<h4>Payment Options</h4>
+		<p>• A minimum 50% deposit is required upon confirmation of the order & the remaining 50% the day of the event</p>
+		<br />
+		<h4>Serving & Staff</h4>
+		<p>• All caterings will be served on plastic trays</p>
+		<p>• Plates & utensils are calculated based on serving size, no additional plates or utensils will be provided</p>
+		<br />
+		<h4>Changes & Cancelations</h4>
+		<p>• A fee may apply for any substitutions & customizations</p>
+		<br />
+		<h4>Pick up & Delivery</h4>
+		<p>• Delivery with a $200 minimum purchase & a fee of $10 per mile</p>
+		<br />
+		<p>For custom proposals or inquiries, please use the order form or email catering@trufflebrothers.com</p>
+		</div>
+		<div class="large-6 large-offset-1 columns">
+			{% form 'contact' %}
+
+				{% if form.posted_successfully? %}
+				<div class="success feedback accent-text">
+					<p>{{ 'contact_page.success_feedback' | t }}</p>
+				</div>
+				{% endif %}
+
+				{% if form.errors %}
+				<div class="error feedback accent-text">
+					<p>{{ 'contact_page.error_feedback' | t }}:</p>
+					<ul>
+					{% for field in form.errors %}
+						<li>{{ field | capitalize | replace: 'Body', 'Message' }} {{ form.errors.messages[field] }}</li>
+					{% endfor %}
+					</ul>
+				</div>
+				{% endif %}
+
+				{% unless form.posted_successfully? %}
+
+					<label for="contactFormEventname">Name Of Your Event</label>
+					<input required="required" type="text" id="contactFormEventname" name="contact[eventname]" class="styled-input{% if form.errors contains 'eventname' %} error{% endif %}" value="{{ contact.fields.eventname }}" />
+
+					<label for="contactFormCompany">Company (Optional)</label>
+					<input type="text" id="contactFormCompany" name="contact[company]" class="styled-input{% if form.errors contains 'company' %} error{% endif %}" value="{{ contact.fields.company }}" />
+
+					<label for="contactFormDate">Event Dates</label>
+					<input type="text" id="contactFormDate" name="contact[date]" class="styled-input{% if form.errors contains 'date' %} error{% endif %}" value="{{ contact.fields.date }}" />
+
+					<label>Are Your Dates Flexible</label>
+					<input type="radio" id="contactFormYes" name="contact[flexible]" value="Yes" /> Yes
+					<input type="radio" id="contactFormNo" name="contact[flexible]" value="No" checked /> No<br />
+
+					<label for="contactFormTime">Time?</label>
+					<input type="text" id="contactFormTime" name="contact[time]" class="styled-input{% if form.errors contains 'time' %} error{% endif %}" value="{{ contact.fields.time }}" />
+
+					<label for="contactFormAttendees">How Many Attendees?</label>
+					<input type="text" id="contactFormAttendees" name="contact[attendees]" class="styled-input{% if form.errors contains 'attendees' %} error{% endif %}" value="{{ contact.fields.attendees }}" />
+
+					<label for="contactForFirstname">Name</label>
+					<input required="required" type="text" id="contactForFirstname" name="contact[firstname]" class="styled-input{% if form.errors contains 'firstname' %} error{% endif %}" value="{{ contact.fields.firstname }}" />
+
+					<label for="contactForLastname">Last Name</label>
+					<input required="required" type="text" id="contactForLastname" name="contact[lastname]" class="styled-input{% if form.errors contains 'lastname' %} error{% endif %}" value="{{ contact.fields.lastname }}" />
+
+					<label for="contactFormEmail">Email</label>
+					<input required="required" type="email" id="contactFormEmail" name="contact[email]" class="styled-input{% if form.errors contains 'email' %} error{% endif %}" value="{{ contact.fields.email }}" />
+
+					<label for="contactFormTelephone">Phone Number</label>
+					<input type="tel" id="contactFormTelephone" name="contact[phone]" class="styled-input{% if form.errors contains 'phone' %} error{% endif %}" value="{{ contact.fields.phone }}" />
+
+					<label for="contactForAddress">Address</label>
+					<input required="required" type="text" id="contactForAddress" name="contact[address]" class="styled-input{% if form.errors contains 'address' %} error{% endif %}" value="{{ contact.fields.address }}" />
+
+					<label for="contactForAddress2">Address Line 2</label>
+					<input required="required" type="text" id="contactForAddress2" name="contact[address2]" class="styled-input{% if form.errors contains 'address2' %} error{% endif %}" value="{{ contact.fields.address2 }}" />
+
+					<label for="contactForCity">City</label>
+					<input required="required" type="text" id="contactForCity" name="contact[city]" class="styled-input{% if form.errors contains 'city' %} error{% endif %}" value="{{ contact.fields.city }}" />
+
+					<label for="contactForState">State</label>
+					<input required="required" type="text" id="contactForState" name="contact[state]" class="styled-input{% if form.errors contains 'state' %} error{% endif %}" value="{{ contact.fields.state }}" />
+
+					<label for="contactForZip">Zip/Postal Code</label>
+					<input required="required" type="text" id="contactForZip" name="contact[zip]" class="styled-input{% if form.errors contains 'zip' %} error{% endif %}" value="{{ contact.fields.zip }}" />
+
+					<label for="contactFormMessage">Additional Information</label>
+					<textarea required="required" rows="10" cols="60"  id="contactFormMessage" name="contact[body]" class="styled-input{% if form.errors contains 'body' %} error{% endif %}">{{  contact.fields.body }}</textarea>
+
+					<div class="contact-page--submit-button">
+						<input class="button styled-submit" type="submit" id="contactFormSubmit" value="Submit" />
+					</div>
+
+				{% endunless %}
+
+				{% if form.posted_successfully? or form.errors %}
+					<script>
+						window.location.hash = '#page-content';
+					</script>
+				{% endif %}
+
+			{% endform %}
+
+		</div>
+	</div>
+</div>
