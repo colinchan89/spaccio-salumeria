@@ -1,7 +1,7 @@
 <div class="cart">
   {% if view == 'desktop' %}
    	<div class="show--medium-large">
-      <a href="/pages/order"><span>Order Now</span></a>
+      <a class="order-now-link" href="/pages/order"><span>Order Now</span></a>
   	  <a class="cart-link" href="/cart">{{ 'layout.header.cart' | t }} <span class="number-wrapper {% if cart.item_count == 0 %}hide{% endif %}">(<span class="number">{{ cart.item_count }}</span>)</span>
   	  {% include 'snippet-symbol' with 'cart' %}</a>
 
@@ -30,7 +30,7 @@
                   <span class="number">{{ cart.item_count }}</span> {{ item_trans }}
                 </a>
               </td>
-  						<td colspan="2" class="text-right all-caps"><strong>{{ 'products.recently_added_popup.total' | t }} <span class="total-price money" style="margin-left:5px;">{{ cart.total_price | money }}</span></strong></td>
+  						<td colspan="2" class="text-right all-caps"><strong>{{ 'products.recently_added_popup.total' | t }}</strong> <span class="total-price money" style="margin-left:5px;">{{ cart.total_price | money }}</span></td>
   			    </tr>
   			  </tfoot>
 
