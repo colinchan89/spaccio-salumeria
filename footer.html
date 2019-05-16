@@ -13,7 +13,7 @@
   <div class="row bottom">
 
     {% for block in section.blocks limit: block_count %}
-      <div class="large-{{ column_count }} columns {{ block.type }}">
+      <div class="large-{{ column_count }} {% unless block.type == 'subscribe' %}small-6{% endunless %} columns {{ block.type }}">
 
         {% case block.type %}
           {% when 'about' %}

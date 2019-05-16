@@ -1,7 +1,7 @@
 {% capture general_settings %}{{ settings.color--alternative }}{% endcapture %}
 <style>
   header .logo-image {
-    width: 140px;
+    width: 130px;
   }
 
   {% unless section.settings.logo %}
@@ -80,7 +80,10 @@
 
     <div class="header--mobile">
       <div class="off-canvas--open" data-off-canvas--open="left-sidebar">
-        {% include 'snippet-symbol' with 'menu' %}
+        <svg width="25" height="11" viewBox="0 0 25 11" class="fw--icon fw--icon--menu"><defs><style>.a,.c{fill:none;}.b{clip-path:url(#a);}.c{stroke:#303030;}</style><clipPath id="a"><rect class="a" width="25" height="11"/></clipPath></defs><g class="b"><line class="c" x2="25" transform="translate(0 10.5)"/><line class="c" x2="18" transform="translate(0 0.5)"/></g></svg>
+        <div class="number-wrapper {% if cart.item_count == 0 %}hide{% endif %} cart-number-icon">
+          <span class="number">{{ cart.item_count }}</span>
+        </div>
       </div>
 
       <div class="header--mobile--title">
@@ -88,12 +91,8 @@
       </div>
 
       <div class="header--mobile--cart">
-        <a class="header--mobile--cart-link font--accent" href="/cart">
-          {{ 'layout.header.cart' | t }}
-          <span class="number-wrapper {% if cart.item_count == 0 %}hide{% endif %}">
-            (<span class="number">{{ cart.item_count }}</span>)
-          </span>
-          {% include 'snippet-symbol' with 'cart' %}
+        <a class="header--mobile--cart-link font--accent" style="text-decoration:underline;" href="https://get.chownow.com">
+          Order Online
         </a>
         <div class="header--mobile--recently-added">
           {% include 'snippet-cart', view: 'mobile' %}
