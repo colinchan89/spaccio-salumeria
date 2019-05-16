@@ -1648,7 +1648,6 @@ img {
   z-index: 100;
   min-height: 100vh;
   width: 100%;
-  max-width: 400px;
   padding: 20px;
   background-color: {{ settings.color-page-bg }};
   -webkit-transform: translateX(-100%);
@@ -5561,7 +5560,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -5590,8 +5589,8 @@ body {
   padding: 4px;
   border-radius: 10px;
   position: absolute;
-  top: 20px;
-  left: 48px;
+  top: 11px;
+  left: 47px;
   font-family: interstate-condensed, sans-serif;
   font-weight: 800;
   font-style: normal;
@@ -5751,13 +5750,7 @@ body {
 }
 
 .main-footer .about {
-  text-align: center;
-}
-
-@media only screen and (min-width: 768px) {
-  .main-footer .about {
-    text-align: left;
-  }
+  text-align: left;
 }
 
 .main-footer .about .text {
@@ -5765,13 +5758,7 @@ body {
 }
 
 .main-footer .menu {
-  text-align: center;
-}
-
-@media only screen and (min-width: 768px) {
-  .main-footer .menu {
-    text-align: left;
-  }
+  text-align: left;
 }
 
 .main-footer .menu .footer-nav {
@@ -5779,7 +5766,7 @@ body {
   padding: 0;
 }
 
-.main-footer .menu .footer-nav li {
+.main-footer .menu .footer-nav li, .main-footer .about p {
   margin: 0;
   padding: 0 0 5px;
 }
@@ -5796,13 +5783,7 @@ body {
 }
 
 .main-footer .subscribe {
-  text-align: center;
-}
-
-@media only screen and (min-width: 768px) {
-  .main-footer .subscribe {
-    text-align: left;
-  }
+  text-align: left;
 }
 
 .main-footer .subscribe .contact-form, .main-footer .subscribe .mailchimp-form {
@@ -7163,7 +7144,7 @@ body {
 
 @media only screen and (max-width: 767px) {
   .featured-grid--root {
-    padding: 30px 0;
+    padding: 25px 0;
   }
 }
 
@@ -7924,7 +7905,7 @@ a.featured-grid--call-to-action:hover {
 
 @media only screen and (max-width: 767px) {
   .product-slider {
-    padding: 30px 0;
+    padding: 25px 0;
   }
 }
 
@@ -8055,7 +8036,10 @@ h2.map--heading {
 
 @media only screen and (max-width: 767px) {
   .featured-content--root {
-    padding: 30px 15px;
+    padding: 0 0 25px 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: #efe9df;
   }
 }
 
@@ -8212,11 +8196,11 @@ h2.map--heading {
 
 @media only screen and (max-width: 767px) {
   .featured-content--text {
-    padding: 15px 10px 0;
+    padding: 30px 20px 0;
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
-    text-align: center;
+    text-align: left;
     width: 100% !important;
     max-width: 100% !important;
     position: relative !important;
@@ -8429,7 +8413,7 @@ h2.map--heading {
 
 @media only screen and (max-width: 767px) {
   .map--root {
-    padding: 30px 15px;
+    padding: 25px 15px;
   }
 }
 
@@ -8578,7 +8562,7 @@ h2.map--heading {
 
 @media only screen and (max-width: 767px) {
   .newsletter--root {
-    padding: 30px 0;
+    padding: 25px 0;
   }
 }
 
@@ -8661,7 +8645,7 @@ input.newsletter--email {
 
 @media only screen and (max-width: 767px) {
   .featured-video--root {
-    padding: 30px 15px;
+    padding: 25px 15px;
   }
 }
 
@@ -8693,7 +8677,7 @@ input.newsletter--email {
 
 @media only screen and (max-width: 767px) {
   .featured-text--root {
-    padding: 30px 15px;
+    padding: 25px 15px;
   }
 }
 
@@ -8815,7 +8799,7 @@ input.newsletter--email {
 
 @media only screen and (max-width: 767px) {
   .instagram--root {
-    padding: 30px 0;
+    padding: 25px 0;
   }
 }
 
@@ -10979,7 +10963,13 @@ html.no-cssgrid .product-page--thumbs[data-position="image-column"] {
 @media only screen and (max-width: 767px) {
   .section--slideshow .slider{
     padding-bottom: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+  }
+  .section--slideshow .slider .owl-pagination .owl-page {
+    background-color: #303030;
+  }
+  .section--slideshow .slider .owl-pagination .owl-page.active {
+    opacity: 1;
   }
   h2.title, h2.featured-content--title {
     font-size: 17px;
@@ -10987,7 +10977,40 @@ html.no-cssgrid .product-page--thumbs[data-position="image-column"] {
   .section--slideshow .slider .slide .caption .sub-title {
     font-size: 20px;
   }
-  .product-slider h2, h2.featured-grid--title, .featured-text--body p, .newsletter--subheading p, h2.instagram--heading, h2.featured-blog--heading, h2.map--heading {
+  .product-slider h2,
+  h2.featured-grid--title,
+  .featured-text--body p,
+  .newsletter--subheading p,
+  h2.instagram--heading,
+  h2.featured-blog--heading,
+  h2.map--heading,
+  .featured-content--description {
     font-size: 20px;
+  }
+  .featured-grid--item--title {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+  .featured-content--root[data-text-position="center"] .featured-content--text {
+    text-align: left;
+  }
+  .template-index .index-sections {
+    padding-bottom: 25px;
+  }
+  .main-footer .subscribe .contact-form, .main-footer .subscribe .mailchimp-form {
+    padding-bottom: 30px;
+  }
+  .main-footer .subscribe .contact-form input[type="email"], .main-footer .subscribe .mailchimp-form input[type="email"] {
+    width: 55%;
+    margin-right: 10px;
+  }
+  .main-footer .subscribe .contact-form input[type="submit"], .main-footer .subscribe .mailchimp-form input[type="submit"] {
+    width: 38%;
+  }
+  .main-footer .social-follow {
+    padding-bottom: 10px;
+  }
+  .main-footer {
+    padding-bottom: 100px;
   }
 }
