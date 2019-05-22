@@ -83,8 +83,8 @@
 		</div>
 	</div>
 	<div class="row contactform--block">
+    <h2 class="contactform--header">Ordering Details</h2>
 		<div class="large-4 columns">
-		<h2 class="contactform--header">Ordering Details</h2>
 		<h3>Condizione</h3>
 		<h4>Ordering & Deadlines</h4>
 		<p>• Catering orders require a minimum notice of 72 business hours prior to the event date. </p>
@@ -106,7 +106,8 @@
 		<br />
 		<p>For custom proposals or inquiries, please use the order form or email catering@trufflebrothers.com</p>
 		</div>
-		<div class="large-6 large-offset-1 columns">
+		<div class="large-7 large-offset-1 columns form-wrapper">
+      <h3>Looking for something different? Tell us about your event.</h3>
 			{% form 'contact' %}
 
 				{% if form.posted_successfully? %}
@@ -128,54 +129,86 @@
 
 				{% unless form.posted_successfully? %}
 
-					<label for="contactFormEventname">Name Of Your Event</label>
-					<input required="required" type="text" id="contactFormEventname" name="contact[eventname]" class="styled-input{% if form.errors contains 'eventname' %} error{% endif %}" value="{{ contact.fields.eventname }}" />
+					<div class="form-field-wrapper">
+            <label for="contactFormEventname">Name Of Your Event</label>
+  					<input required="required" type="text" id="contactFormEventname" name="contact[eventname]" class="styled-input{% if form.errors contains 'eventname' %} error{% endif %}" value="{{ contact.fields.eventname }}" />
+          </div>
 
-					<label for="contactFormCompany">Company (Optional)</label>
-					<input type="text" id="contactFormCompany" name="contact[company]" class="styled-input{% if form.errors contains 'company' %} error{% endif %}" value="{{ contact.fields.company }}" />
+					<div class="form-field-wrapper right">
+            <label for="contactFormCompany">Company (Optional)</label>
+  					<input type="text" id="contactFormCompany" name="contact[company]" class="styled-input{% if form.errors contains 'company' %} error{% endif %}" value="{{ contact.fields.company }}" />
+          </div>
 
-					<label for="contactFormDate">Event Dates</label>
-					<input type="text" id="contactFormDate" name="contact[date]" class="styled-input{% if form.errors contains 'date' %} error{% endif %}" value="{{ contact.fields.date }}" />
+					<div class="form-field-wrapper">
+            <label for="contactFormDate">Event Dates</label>
+  					<input type="text" id="contactFormDate" name="contact[date]" class="styled-input{% if form.errors contains 'date' %} error{% endif %}" value="{{ contact.fields.date }}" />
+          </div>
 
-					<label>Are Your Dates Flexible</label>
-					<input type="radio" id="contactFormYes" name="contact[flexible]" value="Yes" /> Yes
-					<input type="radio" id="contactFormNo" name="contact[flexible]" value="No" checked /> No<br />
+          <div class="form-field-wrapper right">
+  					<label>Are Your Dates Flexible</label>
+  					<input type="radio" id="contactFormYes" name="contact[flexible]" value="Yes" /><label for="contactFormYes">Yes</label>
+  					<input type="radio" id="contactFormNo" name="contact[flexible]" value="No" checked /><label for="contactFormNo">No</label>
+          </div>
 
-					<label for="contactFormTime">Time?</label>
-					<input type="text" id="contactFormTime" name="contact[time]" class="styled-input{% if form.errors contains 'time' %} error{% endif %}" value="{{ contact.fields.time }}" />
+					<div class="form-field-wrapper">
+            <label for="contactFormTime">Time?</label>
+  					<input type="text" id="contactFormTime" name="contact[time]" class="styled-input{% if form.errors contains 'time' %} error{% endif %}" value="{{ contact.fields.time }}" />
+          </div>
 
-					<label for="contactFormAttendees">How Many Attendees?</label>
-					<input type="text" id="contactFormAttendees" name="contact[attendees]" class="styled-input{% if form.errors contains 'attendees' %} error{% endif %}" value="{{ contact.fields.attendees }}" />
+					<div class="form-field-wrapper right">
+            <label for="contactFormAttendees">How Many Attendees?</label>
+  					<input type="text" id="contactFormAttendees" name="contact[attendees]" class="styled-input{% if form.errors contains 'attendees' %} error{% endif %}" value="{{ contact.fields.attendees }}" />
+          </div>
 
-					<label for="contactForFirstname">Name</label>
-					<input required="required" type="text" id="contactForFirstname" name="contact[firstname]" class="styled-input{% if form.errors contains 'firstname' %} error{% endif %}" value="{{ contact.fields.firstname }}" />
+					<div class="form-field-wrapper">
+            <label for="contactForFirstname">Name</label>
+  					<input required="required" type="text" id="contactForFirstname" name="contact[firstname]" class="styled-input{% if form.errors contains 'firstname' %} error{% endif %}" value="{{ contact.fields.firstname }}" />
+          </div>
 
-					<label for="contactForLastname">Last Name</label>
-					<input required="required" type="text" id="contactForLastname" name="contact[lastname]" class="styled-input{% if form.errors contains 'lastname' %} error{% endif %}" value="{{ contact.fields.lastname }}" />
+					<div class="form-field-wrapper right">
+            <label for="contactForLastname">Last Name</label>
+  					<input required="required" type="text" id="contactForLastname" name="contact[lastname]" class="styled-input{% if form.errors contains 'lastname' %} error{% endif %}" value="{{ contact.fields.lastname }}" />
+          </div>
 
-					<label for="contactFormEmail">Email</label>
-					<input required="required" type="email" id="contactFormEmail" name="contact[email]" class="styled-input{% if form.errors contains 'email' %} error{% endif %}" value="{{ contact.fields.email }}" />
+					<div class="form-field-wrapper">
+            <label for="contactFormEmail">Email</label>
+  					<input required="required" type="email" id="contactFormEmail" name="contact[email]" class="styled-input{% if form.errors contains 'email' %} error{% endif %}" value="{{ contact.fields.email }}" />
+          </div>
 
-					<label for="contactFormTelephone">Phone Number</label>
-					<input type="tel" id="contactFormTelephone" name="contact[phone]" class="styled-input{% if form.errors contains 'phone' %} error{% endif %}" value="{{ contact.fields.phone }}" />
+					<div class="form-field-wrapper right">
+            <label for="contactFormTelephone">Phone Number</label>
+  					<input type="tel" id="contactFormTelephone" name="contact[phone]" class="styled-input{% if form.errors contains 'phone' %} error{% endif %}" value="{{ contact.fields.phone }}" />
+          </div>
 
-					<label for="contactForAddress">Address</label>
-					<input required="required" type="text" id="contactForAddress" name="contact[address]" class="styled-input{% if form.errors contains 'address' %} error{% endif %}" value="{{ contact.fields.address }}" />
+					<div class="form-field-wrapper form-field-wrapper--wide">
+            <label for="contactForAddress">Address</label>
+  					<input required="required" type="text" id="contactForAddress" name="contact[address]" class="styled-input{% if form.errors contains 'address' %} error{% endif %}" value="{{ contact.fields.address }}" />
+          </div>
 
-					<label for="contactForAddress2">Address Line 2</label>
-					<input required="required" type="text" id="contactForAddress2" name="contact[address2]" class="styled-input{% if form.errors contains 'address2' %} error{% endif %}" value="{{ contact.fields.address2 }}" />
+					<div class="form-field-wrapper">
+            <label for="contactForAddress2">Address Line 2</label>
+  					<input type="text" id="contactForAddress2" name="contact[address2]" class="styled-input{% if form.errors contains 'address2' %} error{% endif %}" value="{{ contact.fields.address2 }}" />
+          </div>
 
-					<label for="contactForCity">City</label>
-					<input required="required" type="text" id="contactForCity" name="contact[city]" class="styled-input{% if form.errors contains 'city' %} error{% endif %}" value="{{ contact.fields.city }}" />
+					<div class="form-field-wrapper right">
+            <label for="contactForCity">City</label>
+  					<input required="required" type="text" id="contactForCity" name="contact[city]" class="styled-input{% if form.errors contains 'city' %} error{% endif %}" value="{{ contact.fields.city }}" />
+          </div>
 
-					<label for="contactForState">State</label>
-					<input required="required" type="text" id="contactForState" name="contact[state]" class="styled-input{% if form.errors contains 'state' %} error{% endif %}" value="{{ contact.fields.state }}" />
+					<div class="form-field-wrapper">
+            <label for="contactForState">State</label>
+  					<input required="required" type="text" id="contactForState" name="contact[state]" class="styled-input{% if form.errors contains 'state' %} error{% endif %}" value="{{ contact.fields.state }}" />
+          </div>
 
-					<label for="contactForZip">Zip/Postal Code</label>
-					<input required="required" type="text" id="contactForZip" name="contact[zip]" class="styled-input{% if form.errors contains 'zip' %} error{% endif %}" value="{{ contact.fields.zip }}" />
+					<div class="form-field-wrapper right">
+            <label for="contactForZip">Zip/Postal Code</label>
+  					<input required="required" type="text" id="contactForZip" name="contact[zip]" class="styled-input{% if form.errors contains 'zip' %} error{% endif %}" value="{{ contact.fields.zip }}" />
+          </div>
 
-					<label for="contactFormMessage">Additional Information</label>
-					<textarea required="required" rows="10" cols="60"  id="contactFormMessage" name="contact[body]" class="styled-input{% if form.errors contains 'body' %} error{% endif %}">{{  contact.fields.body }}</textarea>
+					<div class="form-field-wrapper form-field-wrapper--wide">
+            <label for="contactFormMessage">Additional Information</label>
+  					<textarea rows="10" cols="60"  id="contactFormMessage" name="contact[body]" class="styled-input{% if form.errors contains 'body' %} error{% endif %}">{{  contact.fields.body }}</textarea>
+          </div>
 
 					<div class="contact-page--submit-button">
 						<input class="button styled-submit" type="submit" id="contactFormSubmit" value="Submit" />
@@ -188,6 +221,12 @@
 						window.location.hash = '#page-content';
 					</script>
 				{% endif %}
+
+        <script>
+          $( function() {
+            $( "#contactFormDate" ).datepicker();
+          } );
+        </script>
 
 			{% endform %}
 
