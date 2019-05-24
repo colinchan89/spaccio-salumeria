@@ -4646,9 +4646,9 @@ body {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
 }
 
 .owl-carousel .owl-pagination {
@@ -7436,6 +7436,7 @@ body {
   text-align: center;
   padding-left: 0;
   padding-right: 0;
+  padding-top: 25px;
 }
 
 .featured-grid--root[data-text-position="center"] .featured-grid--item--text {
@@ -7477,7 +7478,7 @@ body {
 .featured-grid--item--title {
   max-width: 900px;
   margin: 0 auto;
-  padding-bottom: 25px;
+  padding-bottom: 12.5px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -7513,18 +7514,18 @@ body {
 }
 
 a.featured-grid--call-to-action {
-  background: {{ settings.color-button-bg }};
-  border-color: {{ settings.color-border }};
-  border-radius: 2px;
+  background: #DFC595;
   border: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
-  color: {{ settings.color-button }};
+  color: #303030;
   display: inline-block;
   font-size: 12px;
-  font-weight: $font--text--weight;
+  font-family: interstate-condensed, sans-serif;
+  font-weight: 800;
+  font-style: normal;
   height: 45px;
-  letter-spacing: 1px;
+  letter-spacing: 1.3px;
   line-height: 45px;
   margin: 0;
   padding: 0 25px;
@@ -7535,12 +7536,12 @@ a.featured-grid--call-to-action {
 }
 
 a.featured-grid--call-to-action:focus {
-  background: {{ settings.color-button-bg }};
+  // background: {{ settings.color-button-bg }};
 }
 
 a.featured-grid--call-to-action:hover {
-  color: {{ settings.color-button }};
-  background: {{ settings.color-button-bg }};
+  // color: {{ settings.color-button }};
+  // background: {{ settings.color-button-bg }};
 }
 
 .featured-grid--item--title {
@@ -8045,7 +8046,9 @@ a.featured-grid--call-to-action:hover {
   margin: 0;
 }
 
-h2.featured-text--heading, h2.newsletter--heading {
+h2.featured-text--heading,
+h2.featured-grid--title,
+h2.newsletter--heading {
   font-family: plantin, sans-serif;
   font-weight: 300;
   font-size: 20px;
@@ -8054,7 +8057,7 @@ h2.featured-text--heading, h2.newsletter--heading {
 }
 
 .product-slider h2,
-h2.featured-grid--title,
+h3.featured-grid--subtitle,
 .featured-text--body p,
 .newsletter--subheading p,
 h2.instagram--heading,
@@ -11123,7 +11126,7 @@ html.no-cssgrid .product-page--thumbs[data-position="image-column"] {
     line-height: 1.15;
   }
   .product-slider h2,
-  h2.featured-grid--title,
+  h3.featured-grid--subtitle,
   .featured-text--body p,
   .newsletter--subheading p,
   h2.instagram--heading,
